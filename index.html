@@ -12,12 +12,32 @@
         p { line-height: 1.6; color: #cbd5e1; }
         .skills-badge { display: inline-block; background: #0284c7; color: white; padding: 5px 12px; margin: 5px; border-radius: 15px; font-size: 14px; font-weight: bold; }
         hr { border: 0; height: 1px; background: #334155; margin: 25px 0; }
+        
+        /* 🎨 RESUME BUTTON STYLING (NEW) */
+        .resume-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: white;
+            padding: 12px 24px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
+        .resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.4);
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- 1. MAIN TITLE: Yahan apna naam likhein -->
+        <!-- 1. MAIN TITLE -->
         <h1>Samruddhi Mehare</h1> 
         
         <!-- 2. SUBTITLE -->
@@ -25,10 +45,10 @@
         
         <hr>
 
-        <!-- 3. ABOUT ME: Apni University aur details badlein -->
+        <!-- 3. ABOUT ME -->
         <h2>About Me</h2>
         <p>
-            Hello! I am a fresh graduate from <strong>[Sipna College of Engineering & Technology]</strong>. 
+            Hello! I am a fresh graduate from <strong>Sipna College of Engineering & Technology</strong>. 
             I have a strong passion for cloud computing, automation, and continuous integration. 
             I love learning how to build scalable and reliable infrastructure.
         </p>
@@ -44,6 +64,16 @@
             <span class="skills-badge">🛠️ Git & GitHub</span>
             <span class="skills-badge">🐧 Linux</span>
         </div>
+
+        <hr>
+
+        <!-- 📄 5. RESUME SECTION (NEW) -->
+        <h2>My Resume</h2>
+        <p>Check out my detailed resume to know more about my academic background and technical hands-on experience.</p>
+        <!-- 📝 Note: Niche diye gaye href ke andar apni actual Google Drive link paste kar dena -->
+        <a href="https://drive.google.com/file/d/1Ds_RS1jLj9hx9pbRz4FdH51XL4m269Fo/view?usp=sharing" target="_blank" class="resume-btn">
+            📄 Download / View Resume
+        </a>
     </div>
 
 </body>
