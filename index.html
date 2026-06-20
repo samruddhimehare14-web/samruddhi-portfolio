@@ -3,45 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My DevOps Portfolio</title>
+    <title>Samruddhi Mehare | DevOps Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #0f172a; color: #e2e8f0; text-align: center; padding: 50px; }
-        .container { max-width: 600px; margin: auto; background: #1e293b; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        h1 { color: #38bdf8; margin-bottom: 5px; }
-        h3 { color: #94a3b8; font-weight: normal; margin-top: 0; }
-        p { line-height: 1.6; color: #cbd5e1; }
-        .skills-badge { display: inline-block; background: #0284c7; color: white; padding: 5px 12px; margin: 5px; border-radius: 15px; font-size: 14px; font-weight: bold; }
-        hr { border: 0; height: 1px; background: #334155; margin: 25px 0; }
-        
-        /* 🖼️ PROFILE PHOTO STYLING */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #38bdf8;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        /* 💼 PREMIUM ENTERPRISE TECH THEME */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #090d16; 
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: #f8fafc; 
+            text-align: center; 
+            padding: 60px 20px; 
+            margin: 0;
         }
 
-        /* 🎨 RESUME BUTTON STYLING */
+        /* 🔮 ULTRA-PROFESSIONAL CONTAINER */
+        .container { 
+            max-width: 650px; 
+            margin: auto; 
+            background: #111827; 
+            border: 1px solid #1f2937;
+            padding: 45px 35px; 
+            border-radius: 16px; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+        }
+
+        /* 🖼️ PROFILE PHOTO DESIGN WITH SHARP GLOW */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #38bdf8;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+
+        h1 { font-size: 34px; font-weight: 700; color: #ffffff; margin: 0 0 5px 0; letter-spacing: -0.5px; }
+        h3 { color: #38bdf8; font-weight: 500; margin: 0 0 25px 0; font-size: 18px; letter-spacing: 0.5px; }
+        h2 { font-size: 20px; font-weight: 600; color: #f1f5f9; text-align: left; margin: 0 0 15px 0; display: flex; align-items: center; }
+        p { line-height: 1.7; color: #94a3b8; font-size: 15px; text-align: left; margin: 0; }
+        
+        hr { border: 0; height: 1px; background: #1f2937; margin: 35px 0; }
+
+        /* 🛠️ GRID TECH BADGES */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+        .skills-badge { 
+            background: #1e293b; 
+            color: #cbd5e1; 
+            border: 1px solid #334155;
+            padding: 8px 16px; 
+            border-radius: 8px; 
+            font-size: 14px; 
+            font-weight: 500; 
+            transition: all 0.2s ease;
+        }
+        .skills-badge:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.05);
+            transform: translateY(-1px);
+        }
+
+        /* 🚀 HIGH-IMPACT RESUME BUTTON */
         .resume-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            background: #0284c7;
             color: white;
-            padding: 12px 24px;
-            margin-top: 20px;
-            font-size: 16px;
-            font-weight: bold;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 25px;
-            box-shadow: 0 4px 6px rgba(56, 189, 248, 0.2);
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+            transition: all 0.2s ease;
+            width: 85%;
+            margin-top: 10px;
         }
         .resume-btn:hover {
+            background: #0369a1;
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.4);
-            background: linear-gradient(135deg, #0284c7, #0369a1);
+        }
+
+        /* 🌐 CONNECT / SOCIAL SECTION */
+        .social-links { display: flex; gap: 15px; justify-content: flex-start; margin-top: 15px; }
+        .social-btn {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            background: #111827;
+            transition: all 0.2s ease;
+        }
+        .social-btn:hover {
+            color: #ffffff;
+            border-color: #4b5563;
+            background: #1f2937;
         }
     </style>
 </head>
@@ -49,46 +112,50 @@
 
     <div class="container">
         <!-- 📷 PROFILE PHOTO SECTION -->
-        <!-- 💡 Sahi naam 'profile.jpg.jpeg' daal diya hai -->
         <img src="profile.jpg.jpeg" alt="Samruddhi Mehare" class="profile-img">
 
-        <!-- 1. MAIN TITLE -->
+        <!-- MAIN TITLE & SUBTITLE -->
         <h1>Samruddhi Mehare</h1> 
-        
-        <!-- 2. SUBTITLE -->
-        <h3>🚀 Aspiring DevOps & AWS Cloud Engineer</h3>
+        <h3>Aspiring DevOps & AWS Cloud Engineer</h3>
         
         <hr>
 
-        <!-- 3. ABOUT ME -->
-        <h2>About Me</h2>
+        <!-- ABOUT ME -->
+        <h2>💼 About Me</h2>
         <p>
-            Hello! I am a fresh graduate from <strong>Sipna College of Engineering & Technology</strong>. 
-            I have a strong passion for cloud computing, automation, and continuous integration. 
-            I love learning how to build scalable and reliable infrastructure.
+            I am a fresh engineering graduate from <strong>Sipna College of Engineering & Technology</strong>, specializing in Cloud Computing, Automation, and Infrastructure Management. Passioned about building continuous integration pipelines and managing scalable, reliable infrastructure setups.
         </p>
 
         <hr>
 
-        <!-- 4. SKILLS -->
-        <h2>Tech Stack & Skills</h2>
-        <div>
-            <span class="skills-badge">☁️ AWS (EC2, S3, IAM)</span>
-            <span class="skills-badge">🐋 Docker</span>
-            <span class="skills-badge">⚙️ Jenkins</span>
+        <!-- TECH STACK -->
+        <h2>🛠️ Core Technical Expertise</h2>
+        <div class="skills-grid">
+            <span class="skills-badge">☁️ Amazon Web Services (AWS)</span>
+            <span class="skills-badge">🐋 Docker Containers</span>
+            <span class="skills-badge">⚙️ Jenkins CI/CD</span>
             <span class="skills-badge">🛠️ Git & GitHub</span>
-            <span class="skills-badge">🐧 Linux</span>
+            <span class="skills-badge">🐧 Linux Administration</span>
         </div>
 
         <hr>
 
-        <!-- 📄 5. RESUME SECTION -->
-        <h2>My Resume</h2>
-        <p>Check out my detailed resume to know more about my academic background and technical hands-on experience.</p>
-        <!-- 💡 Aapki asli Google Drive link wapas laga di hai -->
+        <!-- RESUME SECTION -->
+        <h2>📄 Credentials & Professional Resume</h2>
+        <p style="margin-bottom: 15px;">Review my comprehensive technical profile, academic benchmarks, and hands-on laboratory project history.</p>
         <a href="https://google.com" target="_blank" class="resume-btn">
-            📄 Download / View Resume
+            View Official Resume (PDF)
         </a>
+
+        <hr>
+
+        <!-- CONNECT SECTION (NEW) -->
+        <h2>🌐 Connect With Me</h2>
+        <div class="social-links">
+            <!-- 💡 Note: Niche diye gaye href me apni actual GitHub aur LinkedIn profile link paste kar dena -->
+            <a href="https://github.com" target="_blank" class="social-btn">🔗 GitHub Profile</a>
+            <a href="https://linkedin.com" target="_blank" class="social-btn">🔗 LinkedIn Profile</a>
+        </div>
     </div>
 
 </body>
