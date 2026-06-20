@@ -3,177 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samruddhi Mehare | DevOps Portfolio</title>
+    <title>My DevOps Portfolio</title>
     <style>
-        /* 🌐 1. FULL SCREEN DYNAMIC RESET */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background-color: #0f172a; color: #e2e8f0; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: auto; background: #1e293b; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        h1 { color: #38bdf8; margin-bottom: 5px; }
+        h3 { color: #94a3b8; font-weight: normal; margin-top: 0; }
+        p { line-height: 1.6; color: #cbd5e1; }
+        .skills-badge { display: inline-block; background: #0284c7; color: white; padding: 5px 12px; margin: 5px; border-radius: 15px; font-size: 14px; font-weight: bold; }
+        hr { border: 0; height: 1px; background: #334155; margin: 25px 0; }
         
-        body, html {
-            width: 100%;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #070a13;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 50%);
-            background-attachment: fixed;
-            color: #f8fafc;
-        }
-
-        /* 🔮 2. FLEX SPLIT SCREEN LAYOUT (Bina daba hua wide design) */
-        .main-wrapper {
-            display: flex;
-            width: 100%;
-            min-height: 100vh;
-            max-width: 1300px; /* Poori badi screen ka space use karega */
-            margin: auto;
-            padding: 40px;
-            gap: 40px;
-        }
-
-        /* 🎴 LEFT HERO PANEL (Fixed Identity) */
-        .left-panel {
-            flex: 1;
-            min-width: 320px;
-            max-width: 400px;
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 20px;
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            height: fit-content;
-            position: sticky;
-            top: 40px;
-        }
-
-        /* 🖼️ HIGH-IMPACT EXTENDED PROFILE PHOTO */
+        /* 🖼️ PROFILE PHOTO STYLING */
         .profile-img {
-            width: 160px; /* Badi aur clear size */
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #38bdf8;
-            margin-bottom: 25px;
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+            border: 4px solid #38bdf8;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        .left-panel h1 { font-size: 30px; font-weight: 700; color: #ffffff; text-align: center; margin-bottom: 8px; }
-        .left-panel h3 { color: #38bdf8; font-weight: 500; font-size: 16px; text-align: center; letter-spacing: 0.5px; line-height: 1.4; }
-
-        /* 🚀 HIGH-IMPACT WIDE BUTTON */
+        /* 🎨 RESUME BUTTON STYLING */
         .resume-btn {
-            display: block;
-            background: #0284c7;
+            display: inline-block;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
             color: white;
-            padding: 15px;
-            font-size: 15px;
-            font-weight: 600;
+            padding: 12px 24px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
-            transition: all 0.2s ease;
-            width: 100%;
-            margin-top: 30px;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
         }
         .resume-btn:hover {
-            background: #0369a1;
-            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.3);
             transform: translateY(-2px);
-        }
-
-        /* 📂 RIGHT CONTENT PANEL (Bikhra aur spacious layout) */
-        .right-panel {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            justify-content: center; /* Sections ko vertically align karne ke liye */
-        }
-
-        /* CARD FOR INDIVIDUAL SECTIONS */
-        .content-card {
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 { font-size: 22px; font-weight: 600; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #1f2937; padding-bottom: 10px; }
-        p { line-height: 1.8; color: #94a3b8; font-size: 16px; }
-        
-        /* 🛠️ SPACIOUS GRID TECH BADGES */
-        .skills-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
-        .skills-badge { 
-            background: #1e293b; 
-            color: #cbd5e1; 
-            border: 1px solid #334155;
-            padding: 12px 22px; 
-            border-radius: 10px; 
-            font-size: 14px; 
-            font-weight: 500; 
-            transition: all 0.2s ease;
-        }
-        .skills-badge:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.05);
-            transform: translateY(-2px);
-        }
-
-        /* 📱 MOBILE RESPONSIVENESS */
-        @media (max-width: 850px) {
-            .main-wrapper { flex-direction: column; padding: 20px; gap: 20px; }
-            .left-panel { max-width: 100%; position: relative; top: 0; }
+            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.4);
+            background: linear-gradient(135deg, #0284c7, #0369a1);
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Flex Wrapper utilizing full screen canvas -->
-    <div class="main-wrapper">
+    <div class="container">
+        <!-- 📷 PROFILE PHOTO SECTION -->
+        <!-- 💡 Sahi naam 'profile.jpg.jpeg' daal diya hai -->
+        <img src="profile.jpg.jpeg" alt="Samruddhi Mehare" class="profile-img">
+
+        <!-- 1. MAIN TITLE -->
+        <h1>Samruddhi Mehare</h1> 
         
+        <!-- 2. SUBTITLE -->
+        <h3>🚀 Aspiring DevOps & AWS Cloud Engineer</h3>
         
-        <div class="left-panel">
-            <img src="profile.jpg.jpeg" alt="Samruddhi Mehare" class="profile-img">
-            <h1>Samruddhi Mehare</h1> 
-            <h3>🚀 Aspiring DevOps &<br>AWS Cloud Engineer</h3>
-            
-            <a href="https://google.com" target="_blank" class="resume-btn">
-                📄 View Official Resume
-            </a>
+        <hr>
+
+        <!-- 3. ABOUT ME -->
+        <h2>About Me</h2>
+        <p>
+            Hello! I am a fresh graduate from <strong>Sipna College of Engineering & Technology</strong>. 
+            I have a strong passion for cloud computing, automation, and continuous integration. 
+            I love learning how to build scalable and reliable infrastructure.
+        </p>
+
+        <hr>
+
+        <!-- 4. SKILLS -->
+        <h2>Tech Stack & Skills</h2>
+        <div>
+            <span class="skills-badge">☁️ AWS (EC2, S3, IAM)</span>
+            <span class="skills-badge">🐋 Docker</span>
+            <span class="skills-badge">⚙️ Jenkins</span>
+            <span class="skills-badge">🛠️ Git & GitHub</span>
+            <span class="skills-badge">🐧 Linux</span>
         </div>
 
-        <!-- 📂 RIGHT PANEL: Detailed Experience Areas -->
-        <div class="right-panel">
-            
-            <!-- ABOUT ME CARD -->
-            <div class="content-card">
-                <h2>💼 About Me</h2>
-                <p>
-                    I am a fresh engineering graduate from <strong>Sipna College of Engineering & Technology</strong>, specializing in Cloud Computing, Automation, and Infrastructure Management. Passionate about building continuous integration pipelines and managing scalable, reliable infrastructure setups.
-                </p>
-            </div>
+        <hr>
 
-            <!-- TECH STACK CARD -->
-            <div class="content-card">
-                <h2>🛠️ Core Technical Expertise</h2>
-                <div class="skills-grid">
-                    <span class="skills-badge">☁️ Amazon Web Services (AWS)</span>
-                    <span class="skills-badge">🐋 Docker Containers</span>
-                    <span class="skills-badge">⚙️ Jenkins CI/CD</span>
-                    <span class="skills-badge">🛠️ Git & GitHub</span>
-                    <span class="skills-badge">🐧 Linux Administration</span>
-                </div>
-            </div>
-
-        </div>
-
+        <!-- 📄 5. RESUME SECTION -->
+        <h2>My Resume</h2>
+        <p>Check out my detailed resume to know more about my academic background and technical hands-on experience.</p>
+        <!-- 💡 Aapki asli Google Drive link wapas laga di hai -->
+        <a href="https://google.com" target="_blank" class="resume-btn">
+            📄 Download / View Resume
+        </a>
     </div>
 
 </body>
